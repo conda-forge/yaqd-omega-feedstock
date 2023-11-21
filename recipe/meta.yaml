@@ -11,6 +11,7 @@ source:
 
 build:
   entry_points:
+    - yaqd-omega-d8200 = yaqd_omega._omega_d8200:OmegaD8200.main
     - yaqd-omega-platinum = yaqd_omega._omega_platinum:OmegaPlatinum.main
     - yaqd-omega-iseries-modbus = yaqd_omega._omega_iseries_modbus:OmegaIseriesModbus.main
   noarch: python
@@ -33,6 +34,7 @@ test:
     - yaqd_omega
   commands:
     - pip check
+    - yaqd-omega-d8200 --help
     - yaqd-omega-platinum --help
     - yaqd-omega-iseries-modbus --help
   requires:
